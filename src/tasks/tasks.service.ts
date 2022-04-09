@@ -44,4 +44,8 @@ export class TasksService {
     this.tasks.push(task);
     return task;
   }
+
+  getTaskById(id: string): Task[] {
+      return this.tasks.filter(item => item.id === id)
+  }
 }
